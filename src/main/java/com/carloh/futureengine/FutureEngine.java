@@ -1,5 +1,6 @@
 package com.carloh.futureengine;
 
+import com.carloh.futureengine.item.ModCreativeModTabs;
 import com.carloh.futureengine.item.Moditems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTab;
@@ -28,12 +29,13 @@ public class FutureEngine
     public FutureEngine(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
         Moditems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
-
         modEventBus.addListener(this::addCreative);
 
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -45,10 +47,9 @@ public class FutureEngine
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(Moditems.TESTING);
-            //d
-        }
+        //if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+        //    event.accept(Moditems.TESTING);
+        //}
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

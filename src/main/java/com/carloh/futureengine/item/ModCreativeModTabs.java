@@ -25,6 +25,7 @@ public class ModCreativeModTabs {
                         output.accept(Moditems.RUBBER.get());
 
                         output.accept(Modblock.URANIUM_BLOCK.get());
+                        output.accept(Modblock.URANIUM_ORE.get());
                     })
                     .build());
 

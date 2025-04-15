@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [{
+    "item": "futureengine:uranium_block"
+  }],
+  "result": {
+    "item": "futureengine:uranium_ingot",
+    "count": 9
+  }
+}

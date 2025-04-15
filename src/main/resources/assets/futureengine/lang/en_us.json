@@ -1,4 +1,8 @@
 {
-  "item.futureengine.testing": "Testing",
+  "item.futureengine.low_resistance_chip": "Low Resistance Chip",
+  "item.futureengine.copper_wire": "Copper Wire",
+  "item.futureengine.rubber": "Rubber",
+  "item.futureengine.resine": "Resine",
+
   "futureenginetab.futureengine_tab": "Start Engine"
 }

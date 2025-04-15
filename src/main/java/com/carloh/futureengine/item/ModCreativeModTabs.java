@@ -15,10 +15,13 @@ public class ModCreativeModTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FutureEngine.MODID);
 
     public static final RegistryObject<CreativeModeTab> FUTUREENGINE_TAB = CREATIVE_MODE_TAB.register("futureengine_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Moditems.TESTING.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Moditems.LOWRESISTANCECHIP.get()))
                     .title(Component.translatable("futureenginetab.futureengine_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(Moditems.TESTING.get());
+                        output.accept(Moditems.LOWRESISTANCECHIP.get());
+                        output.accept(Moditems.COPPERWIRE.get());
+                        output.accept(Moditems.RESINE.get());
+                        output.accept(Moditems.RUBBER.get());
                     })
                     .build());
 

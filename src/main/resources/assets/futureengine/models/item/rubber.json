@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "futureengine:item/testing"
+    "layer0": "futureengine:item/rubber"
   }
 }

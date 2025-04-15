@@ -12,7 +12,16 @@ public class Moditems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, FutureEngine.MODID);
 
-    public static final RegistryObject<Item> TESTING = ITEMS.register("testing",
+    public static final RegistryObject<Item> LOWRESISTANCECHIP = ITEMS.register("low_resistance_chip",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> COPPERWIRE = ITEMS.register("copper_wire",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RESINE = ITEMS.register("resine",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RUBBER = ITEMS.register("rubber",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus){

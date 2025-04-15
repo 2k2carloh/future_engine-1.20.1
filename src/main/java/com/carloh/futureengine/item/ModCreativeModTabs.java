@@ -1,6 +1,7 @@
 package com.carloh.futureengine.item;
 
 import com.carloh.futureengine.FutureEngine;
+import com.carloh.futureengine.blocks.Modblock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -22,6 +23,8 @@ public class ModCreativeModTabs {
                         output.accept(Moditems.COPPERWIRE.get());
                         output.accept(Moditems.RESINE.get());
                         output.accept(Moditems.RUBBER.get());
+
+                        output.accept(Modblock.URANIUM_BLOCK.get());
                     })
                     .build());
 

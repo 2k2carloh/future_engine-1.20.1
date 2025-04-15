@@ -1,5 +1,6 @@
 package com.carloh.futureengine;
 
+import com.carloh.futureengine.blocks.Modblock;
 import com.carloh.futureengine.item.ModCreativeModTabs;
 import com.carloh.futureengine.item.Moditems;
 import com.mojang.logging.LogUtils;
@@ -32,6 +33,7 @@ public class FutureEngine
         ModCreativeModTabs.register(modEventBus);
 
         Moditems.register(modEventBus);
+        Modblock.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

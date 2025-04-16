@@ -24,6 +24,11 @@ public class Moditems {
     public static final RegistryObject<Item> RUBBER = ITEMS.register("rubber",
             () -> new Item(new Item.Properties()));
 
+    //raws
+
+    public static final RegistryObject<Item> URANIUM_RAW = ITEMS.register("uranium_raw",
+            () -> new Item(new Item.Properties()));
+
     //ingots
     public static final RegistryObject<Item> URANIUM_INGOT = ITEMS.register("uranium_ingot",
             () -> new Item(new Item.Properties()));

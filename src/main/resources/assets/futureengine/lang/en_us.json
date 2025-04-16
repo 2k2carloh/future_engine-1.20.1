@@ -9,6 +9,8 @@
   "item.futureengine.bronze_ingot": "Bronze Lingot",
   "item.futureengine.tungsten_ingot": "Tungsten Lingot",
 
+  "item.futureengine.uranium_raw": "Uranium Raw",
+
   "item.futureengine.uranium_dust": "Uranium Dust",
   "item.futureengine.platinum_dust": "Platinum Dust",
   "item.futureengine.bronze_dust": "Bronze Dust",
@@ -16,6 +18,7 @@
 
   "block.futureengine.uranium_block": "Block of Uranium",
   "block.futureengine.uranium_ore": "Uranium Ore",
+  "block.futureengine.raw_uranium_ore": "Block of Raw Uranium",
 
   "futureenginetab.futureengine_tab": "Start Engine"
 }

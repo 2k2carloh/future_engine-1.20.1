@@ -24,6 +24,9 @@ public class ModCreativeModTabs {
                         output.accept(Moditems.RESINE.get());
                         output.accept(Moditems.RUBBER.get());
 
+                        //raws
+                        output.accept(Moditems.URANIUM_RAW.get());
+
                         //ingots
                         output.accept(Moditems.URANIUM_INGOT.get());
                         output.accept(Moditems.PLATINUM_INGOT.get());
@@ -38,6 +41,7 @@ public class ModCreativeModTabs {
 
                         output.accept(Modblock.URANIUM_BLOCK.get());
                         output.accept(Modblock.URANIUM_ORE.get());
+                        output.accept(Modblock.RAW_URANIUM_ORE.get());
                     })
                     .build());
 

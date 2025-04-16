@@ -24,7 +24,17 @@ public class ModCreativeModTabs {
                         output.accept(Moditems.RESINE.get());
                         output.accept(Moditems.RUBBER.get());
 
+                        //ingots
                         output.accept(Moditems.URANIUM_INGOT.get());
+                        output.accept(Moditems.PLATINUM_INGOT.get());
+                        output.accept(Moditems.BRONZE_INGOT.get());
+                        output.accept(Moditems.TUNGSTEN_INGOT.get());
+
+                        //dust
+                        output.accept(Moditems.URANIUM_DUST.get());
+                        output.accept(Moditems.PLATINUM_DUST.get());
+                        output.accept(Moditems.BRONZE_DUST.get());
+                        output.accept(Moditems.TUNGSTEN_DUST.get());
 
                         output.accept(Modblock.URANIUM_BLOCK.get());
                         output.accept(Modblock.URANIUM_ORE.get());

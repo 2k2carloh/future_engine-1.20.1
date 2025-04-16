@@ -3,7 +3,16 @@
   "item.futureengine.copper_wire": "Copper Wire",
   "item.futureengine.rubber": "Rubber",
   "item.futureengine.resine": "Resine",
+
   "item.futureengine.uranium_ingot": "Uranium Ingot",
+  "item.futureengine.platinum_ingot": "Platinum Lingot",
+  "item.futureengine.bronze_ingot": "Bronze Lingot",
+  "item.futureengine.tungsten_ingot": "Tungsten Lingot",
+
+  "item.futureengine.uranium_dust": "Uranium Dust",
+  "item.futureengine.platinum_dust": "Platinum Dust",
+  "item.futureengine.bronze_dust": "Bronze Dust",
+  "item.futureengine.tungsten_dust": "Tungsten Dust",
 
   "block.futureengine.uranium_block": "Block of Uranium",
   "block.futureengine.uranium_ore": "Uranium Ore",

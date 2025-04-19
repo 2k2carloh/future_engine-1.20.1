@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "futureengine:block/pine_log",
+    "south": "futureengine:block/pine_log",
+    "west": "futureengine:block/pine_log",
+    "east": "futureengine:block/pine_log",
+    "up": "futureengine:block/up_pine_log",
+    "down": "futureengine:block/up_pine_log"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "futureengine:block/sprayer_sides",
+    "south": "futureengine:block/sprayer_sides",
+    "west": "futureengine:block/sprayer",
+    "east": "futureengine:block/sprayer_front",
+    "up": "futureengine:block/sprayer",
+    "down": "futureengine:block/sprayer"
+  }
+}

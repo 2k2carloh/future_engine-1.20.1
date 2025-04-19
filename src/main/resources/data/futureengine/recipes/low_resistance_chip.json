@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#H#",
+    "RHR",
+    "#H#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:redstone_torch"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "H": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "futureengine:low_resistance_chip"
+  }
+}

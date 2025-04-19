@@ -1,11 +1,9 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "north": "futureengine:block/resine_pine_log",
-    "south": "futureengine:block/resine_pine_log",
-    "west": "futureengine:block/resine_pine_log",
-    "east": "futureengine:block/resine_pine_log",
-    "up": "futureengine:block/up_pine_log",
-    "down": "futureengine:block/up_pine_log"
+    "front": "futureengine:block/resine_pine_log",
+    "side": "futureengine:block/resine_pine_log",
+    "top": "futureengine:block/up_pine_log",
+    "bottom": "futureengine:block/up_pine_log"
   }
 }

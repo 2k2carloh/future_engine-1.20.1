@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "futureengine:pine_log"
+          "name": "futureengine:raw_tungsten_ore"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "futureengine:blocks/pine_log"
+  "random_sequence": "futureengine:blocks/raw_tungsten_ore"
 }

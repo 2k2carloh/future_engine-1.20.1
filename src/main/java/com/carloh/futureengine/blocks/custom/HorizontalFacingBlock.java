@@ -26,4 +26,6 @@ public abstract class HorizontalFacingBlock extends Block {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
+
+
 }

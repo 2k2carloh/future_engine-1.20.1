@@ -41,11 +41,18 @@ public class ModCreativeModTabs {
 
                         output.accept(Modblock.URANIUM_BLOCK.get());
                         output.accept(Modblock.URANIUM_ORE.get());
-                        output.accept(Modblock.RAW_URANIUM_ORE.get());
 
-                        //other
+                        //raws
+                        output.accept(Modblock.RAW_URANIUM_ORE.get());
+                        output.accept(Modblock.RAW_PLATINUM_ORE.get());
+                        output.accept(Modblock.RAW_TUNGSTEN_ORE.get());
+
+                        //machines
                         output.accept(Modblock.SPRAYER.get());
+
+                        //woods
                         output.accept(Modblock.PINE_LOG.get());
+                        output.accept(Modblock.PINE_WOOD.get());
                         output.accept(Modblock.RESINE_PINE_LOG.get());
                     })
                     .build());

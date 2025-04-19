@@ -2,7 +2,8 @@
   "values": [
     "futureengine:uranium_block",
     "futureengine:uranium_ore",
-    "futureengine:raw_uranium_ore"
-
+    "futureengine:raw_uranium_ore",
+    "futureengine:raw_platinum_ore",
+    "futureengine:raw_tungsten_ore"
   ]
 }

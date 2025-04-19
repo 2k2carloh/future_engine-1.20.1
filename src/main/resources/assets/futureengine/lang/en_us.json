@@ -18,12 +18,16 @@
 
   "block.futureengine.uranium_block": "Block of Uranium",
   "block.futureengine.uranium_ore": "Uranium Ore",
+
   "block.futureengine.raw_uranium_ore": "Block of Raw Uranium",
+  "block.futureengine.raw_platinum_ore": "Block of Raw Platinum",
+  "block.futureengine.raw_tungsten_ore": "Block of Raw Tungsten",
 
   "block.futureengine.sprayer": "Sprayer",
 
   "block.futureengine.pine_log": "Pine Log",
   "block.futureengine.resine_pine_log": "Resine Pine Log",
+  "block.futureengine.pine_wood": "Pine Wood",
 
   "futureenginetab.futureengine_tab": "Start Engine"
 }

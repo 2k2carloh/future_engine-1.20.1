@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.phys.BlockHitResult;
 import com.carloh.futureengine.item.Moditems;
 
@@ -17,6 +18,11 @@ public class ResinePineLogBlock extends RotatedPillarBlock {
 
     public ResinePineLogBlock(Properties properties) {
         super(properties);
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        return this.defaultBlockState().setValue(AXIS, context.getClickedFace().getAxis());
     }
 
     @Override

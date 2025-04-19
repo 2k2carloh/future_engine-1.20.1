@@ -17,6 +17,15 @@ public class SprayerBlock extends HorizontalFacingBlock {
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         Direction direction = context.getHorizontalDirection();
-        return this.defaultBlockState().setValue(FACING, direction.getOpposite());
+
+        if (direction == Direction.NORTH) {
+            return this.defaultBlockState().setValue(FACING, Direction.NORTH);
+        } else if (direction == Direction.SOUTH) {
+            return this.defaultBlockState().setValue(FACING, Direction.SOUTH);
+        } else if (direction == Direction.WEST) {
+            return this.defaultBlockState().setValue(FACING, Direction.EAST);
+        } else {
+            return this.defaultBlockState().setValue(FACING, Direction.WEST);
+        }
     }
 }

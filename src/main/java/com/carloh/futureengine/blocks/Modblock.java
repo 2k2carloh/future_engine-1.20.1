@@ -14,7 +14,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import com.carloh.futureengine.blocks.custom.SprayerBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
 
 
 import java.util.function.Supplier;
@@ -30,13 +29,22 @@ public class Modblock {
     public static final RegistryObject<Block> RAW_URANIUM_ORE = registerBlock("raw_uranium_ore",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
+    public static final RegistryObject<Block> RAW_PLATINUM_ORE = registerBlock("raw_platinum_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> RAW_TUNGSTEN_ORE = registerBlock("raw_tungsten_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    //woods
+
     public static final RegistryObject<Block> PINE_LOG = registerBlock("pine_log",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+            () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> PINE_WOOD = registerBlock("pine_wood",
+            () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
     public static final RegistryObject<Block> RESINE_PINE_LOG = registerBlock("resine_pine_log",
             () -> new ResinePineLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-
-
 
     //machines
 

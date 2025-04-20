@@ -2,6 +2,9 @@
   "values": [
     "futureengine:pine_log",
     "futureengine:pine_wood",
-    "futureengine:resine_pine_log"
+    "futureengine:resine_pine_log",
+    "futureengine:pine_planks",
+    "futureengine:stripped_pine_log",
+    "futureengine:stripped_pine_wood"
   ]
 }

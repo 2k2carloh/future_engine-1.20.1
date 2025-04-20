@@ -43,8 +43,17 @@ public class Modblock {
     public static final RegistryObject<Block> PINE_WOOD = registerBlock("pine_wood",
             () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
+    public static final RegistryObject<Block> STRIPPED_PINE_LOG = registerBlock("stripped_pine_log",
+            () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+
+    public static final RegistryObject<Block> STRIPPED_PINE_WOOD = registerBlock("stripped_pine_wood",
+            () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
     public static final RegistryObject<Block> RESINE_PINE_LOG = registerBlock("resine_pine_log",
             () -> new ResinePineLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> PINE_PLANKS = registerBlock("pine_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
     //machines
 

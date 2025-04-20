@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "futureengine:block/up_pine_log",
+    "side": "futureengine:block/stripped_pine"
+  }
+}

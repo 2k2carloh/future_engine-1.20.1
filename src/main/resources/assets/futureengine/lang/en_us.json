@@ -28,6 +28,9 @@
   "block.futureengine.pine_log": "Pine Log",
   "block.futureengine.resine_pine_log": "Resine Pine Log",
   "block.futureengine.pine_wood": "Pine Wood",
+  "block.futureengine.pine_planks": "Pine Planks",
+  "block.futureengine.stripped_pine_log": "Stripped Pine Log",
+  "block.futureengine.stripped_pine_wood": "Stripped Pine Wood",
 
   "futureenginetab.futureengine_tab": "Start Engine"
 }

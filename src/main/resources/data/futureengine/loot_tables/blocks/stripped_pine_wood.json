@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "futureengine:pine_log"
+          "name": "futureengine:stripped_pine_wood"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "futureengine:blocks/pine_log"
+  "random_sequence": "futureengine:blocks/stripped_pine_wood"
 }

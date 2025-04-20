@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": { "model": "futureengine:block/stripped_pine_log" },
+    "axis=x": { "model": "futureengine:block/stripped_pine_log", "x": 90, "y": 90 },
+    "axis=z": { "model": "futureengine:block/stripped_pine_log", "x": 90 }
+  }
+}

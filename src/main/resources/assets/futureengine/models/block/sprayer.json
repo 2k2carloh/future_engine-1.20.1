@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "front": "futureengine:block/sprayer_front",
-    "side": "futureengine:block/sprayer_sides",
-    "top": "futureengine:block/sprayer",
-    "bottom": "futureengine:block/sprayer"
-  }
-}

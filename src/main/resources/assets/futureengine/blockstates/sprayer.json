@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "futureengine:block/sprayer", "y": 180 },
-    "facing=south": { "model": "futureengine:block/sprayer", "y": 0 },
-    "facing=west":  { "model": "futureengine:block/sprayer", "y": 270 },
-    "facing=east":  { "model": "futureengine:block/sprayer", "y": 90 }
-  }
-}

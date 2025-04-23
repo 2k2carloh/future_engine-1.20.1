@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "front": "futureengine:block/resine_pine_log",
-    "side": "futureengine:block/resine_pine_log",
-    "top": "futureengine:block/up_pine_log",
-    "bottom": "futureengine:block/up_pine_log"
-  }
-}

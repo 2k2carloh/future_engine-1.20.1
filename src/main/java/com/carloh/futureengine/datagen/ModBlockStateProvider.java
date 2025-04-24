@@ -20,7 +20,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        // Bloques simples con textura igual por todos lados
         blockWithItem(Modblock.URANIUM_BLOCK);
         blockWithItem(Modblock.RAW_URANIUM_ORE);
         blockWithItem(Modblock.RAW_PLATINUM_ORE);
@@ -28,14 +27,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(Modblock.PINE_PLANKS);
         blockWithItem(Modblock.URANIUM_ORE);
 
-        // Troncos o bloques con propiedad "axis"
         logBlock(Modblock.PINE_LOG, modLoc("block/pine_log"), modLoc("block/up_pine_log"));
         logBlock(Modblock.RESINE_PINE_LOG, modLoc("block/resine_pine_log"), modLoc("block/up_pine_log"));
         logBlock(Modblock.STRIPPED_PINE_WOOD, modLoc("block/stripped_pine"), modLoc("block/stripped_pine"));
         logBlock(Modblock.STRIPPED_PINE_LOG, modLoc("block/stripped_pine"), modLoc("block/up_pine_log"));
         logBlock(Modblock.PINE_WOOD, modLoc("block/pine_log"), modLoc("block/pine_log"));
 
-        // Bloques con orientación horizontal (facing)
         orientableBlock(
                 Modblock.SPRAYER,
                 modLoc("block/sprayer_front"),

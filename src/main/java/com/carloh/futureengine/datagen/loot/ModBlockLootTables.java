@@ -32,8 +32,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(Modblock.RAW_PLATINUM_ORE.get());
         this.dropSelf(Modblock.RAW_TUNGSTEN_ORE.get());
         this.dropSelf(Modblock.PINE_LOG.get());
-//        this.dropSelf(Modblock.PINE_WOOD.get());
-//        this.dropSelf(Modblock.STRIPPED_PINE_LOG.get());
+        this.dropSelf(Modblock.PINE_WOOD.get());
+        this.dropSelf(Modblock.STRIPPED_PINE_LOG.get());
         this.dropSelf(Modblock.STRIPPED_PINE_WOOD.get());
         this.dropSelf(Modblock.RESINE_PINE_LOG.get());
         this.dropSelf(Modblock.PINE_PLANKS.get());

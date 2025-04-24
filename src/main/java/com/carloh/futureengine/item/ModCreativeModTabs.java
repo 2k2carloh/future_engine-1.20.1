@@ -52,8 +52,8 @@ public class ModCreativeModTabs {
 
                         //woods
                         output.accept(Modblock.PINE_LOG.get());
-//                        output.accept(Modblock.PINE_WOOD.get());
-//                        output.accept(Modblock.STRIPPED_PINE_LOG.get());
+                        output.accept(Modblock.PINE_WOOD.get());
+                        output.accept(Modblock.STRIPPED_PINE_LOG.get());
                         output.accept(Modblock.STRIPPED_PINE_WOOD.get());
                         output.accept(Modblock.PINE_PLANKS.get());
                         output.accept(Modblock.RESINE_PINE_LOG.get());

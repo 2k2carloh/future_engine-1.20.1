@@ -3,11 +3,15 @@ package com.carloh.futureengine.datagen;
 import com.carloh.futureengine.FutureEngine;
 import com.carloh.futureengine.blocks.Modblock;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.RotatedPillarBlock;
+
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -16,29 +20,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-
-        // Registra los bloques normales con item
+        // Bloques simples con textura igual por todos lados
         blockWithItem(Modblock.URANIUM_BLOCK);
         blockWithItem(Modblock.RAW_URANIUM_ORE);
         blockWithItem(Modblock.RAW_PLATINUM_ORE);
         blockWithItem(Modblock.RAW_TUNGSTEN_ORE);
-        blockWithItem(Modblock.PINE_LOG);
         blockWithItem(Modblock.PINE_PLANKS);
-        blockWithItem(Modblock.RESINE_PINE_LOG);
         blockWithItem(Modblock.URANIUM_ORE);
 
+        // Troncos o bloques con propiedad "axis"
+        logBlock(Modblock.PINE_LOG, modLoc("block/pine_log"), modLoc("block/up_pine_log"));
+        logBlock(Modblock.RESINE_PINE_LOG, modLoc("block/resine_pine_log"), modLoc("block/up_pine_log"));
+        logBlock(Modblock.STRIPPED_PINE_WOOD, modLoc("block/stripped_pine"), modLoc("block/stripped_pine"));
+        logBlock(Modblock.STRIPPED_PINE_LOG, modLoc("block/stripped_pine"), modLoc("block/up_pine_log"));
+        logBlock(Modblock.PINE_WOOD, modLoc("block/pine_log"), modLoc("block/pine_log"));
+
+        // Bloques con orientación horizontal (facing)
         orientableBlock(
                 Modblock.SPRAYER,
-                    new ResourceLocation(FutureEngine.MODID, "block/sprayer_front"),
-                    new ResourceLocation(FutureEngine.MODID, "block/sprayer_sides"),
-                    new ResourceLocation(FutureEngine.MODID, "block/sprayer")
-        );
-
-        orientableBlock(
-                Modblock.STRIPPED_PINE_WOOD,
-                new ResourceLocation(FutureEngine.MODID, "block/stripped_pine"),
-                new ResourceLocation(FutureEngine.MODID, "block/stripped_pine"),
-                new ResourceLocation(FutureEngine.MODID, "block/stripped_pine")
+                modLoc("block/sprayer_front"),
+                modLoc("block/sprayer_sides"),
+                modLoc("block/sprayer")
         );
     }
 
@@ -48,18 +50,29 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     public void orientableBlock(RegistryObject<Block> blockRegistryObject, ResourceLocation front, ResourceLocation side, ResourceLocation topBottom) {
         Block block = blockRegistryObject.get();
+        ModelFile model = models().orientable(name(blockRegistryObject), side, front, topBottom);
+        horizontalBlock(block, model);
 
-        this.models().orientable(
-                name(blockRegistryObject),
-                side,
-                front,
-                topBottom
-        );
+        itemModels().getBuilder(name(blockRegistryObject)).parent(model);
+    }
 
-        this.horizontalBlock(block, models().orientable(name(blockRegistryObject), side, front, topBottom));
+    public void axisBlock(RotatedPillarBlock block, ModelFile model) {
+        getVariantBuilder(block).forAllStates(state -> {
+            return ConfiguredModel.builder()
+                    .modelFile(model)
+                    .rotationX(state.getValue(RotatedPillarBlock.AXIS) == net.minecraft.core.Direction.Axis.Y ? 0 : 90)
+                    .rotationY(state.getValue(RotatedPillarBlock.AXIS) == net.minecraft.core.Direction.Axis.X ? 90 : 0)
+                    .build();
+        });
+    }
 
-        itemModels().getBuilder(name(blockRegistryObject))
-                .parent(models().getBuilder(name(blockRegistryObject)));
+    public void logBlock(RegistryObject<Block> blockRegistryObject, ResourceLocation side, ResourceLocation end) {
+        String name = name(blockRegistryObject);
+        ModelFile model = models().cubeColumn(name, side, end);
+
+        axisBlock((RotatedPillarBlock) blockRegistryObject.get(), model);
+
+        itemModels().getBuilder(name).parent(model);
     }
 
     private String name(RegistryObject<Block> blockRegistryObject) {

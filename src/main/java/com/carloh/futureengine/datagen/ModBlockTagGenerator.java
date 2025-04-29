@@ -38,6 +38,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         Modblock.RAW_URANIUM_ORE.get()
                 );
 
+        this.tag(BlockTags.FENCES)
+                .add(Modblock.PINE_FENCE.get());
+
+        this.tag(BlockTags.FENCE_GATES)
+                .add(Modblock.PINE_FENCE_GATE.get());
+
+        this.tag(BlockTags.WALLS)
+                .add(Modblock.PINE_WALL.get());
         //this.tag(BlockTags.NEEDS_STONE_TOOL)
 
     }

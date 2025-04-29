@@ -2,15 +2,15 @@ package com.carloh.futureengine.datagen;
 
 import com.carloh.futureengine.FutureEngine;
 import com.carloh.futureengine.blocks.Modblock;
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
-import net.minecraft.world.level.block.RotatedPillarBlock;
 
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -26,6 +26,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(Modblock.RAW_TUNGSTEN_ORE);
         blockWithItem(Modblock.PINE_PLANKS);
         blockWithItem(Modblock.URANIUM_ORE);
+
+        stairsBlock(((StairBlock) Modblock.PINE_STAIRS.get()), blockTexture(Modblock.PINE_PLANKS.get()));
+        slabBlock(((SlabBlock) Modblock.PINE_SLAB.get()), blockTexture(Modblock.PINE_PLANKS.get()), blockTexture(Modblock.PINE_PLANKS.get()));
+        buttonBlock(((ButtonBlock) Modblock.PINE_BUTTON.get()), blockTexture(Modblock.PINE_PLANKS.get()));
+        pressurePlateBlock(((PressurePlateBlock) Modblock.PINE_PRESSURE_PLATE.get()), blockTexture(Modblock.PINE_PLANKS.get()));
+        fenceBlock(((FenceBlock) Modblock.PINE_FENCE.get()), blockTexture(Modblock.PINE_PLANKS.get()));
+        fenceGateBlock(((FenceGateBlock) Modblock.PINE_FENCE_GATE.get()), blockTexture(Modblock.PINE_PLANKS.get()));
+        wallBlock(((WallBlock) Modblock.PINE_WALL.get()), blockTexture(Modblock.PINE_PLANKS.get()));
+        doorBlockWithRenderType(((DoorBlock) Modblock.PINE_DOOR.get()), modLoc("block/pine_door_bottom"), modLoc("block/pine_door_top"), "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) Modblock.PINE_TRAPDOOR.get()), modLoc("block/pine_trapdoor"), true,"cutout");
 
         logBlock(Modblock.PINE_LOG, modLoc("block/pine_log"), modLoc("block/up_pine_log"));
         logBlock(Modblock.RESINE_PINE_LOG, modLoc("block/resine_pine_log"), modLoc("block/up_pine_log"));
@@ -57,8 +67,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         getVariantBuilder(block).forAllStates(state -> {
             return ConfiguredModel.builder()
                     .modelFile(model)
-                    .rotationX(state.getValue(RotatedPillarBlock.AXIS) == net.minecraft.core.Direction.Axis.Y ? 0 : 90)
-                    .rotationY(state.getValue(RotatedPillarBlock.AXIS) == net.minecraft.core.Direction.Axis.X ? 90 : 0)
+                    .rotationX(state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? 0 : 90)
+                    .rotationY(state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.X ? 90 : 0)
                     .build();
         });
     }

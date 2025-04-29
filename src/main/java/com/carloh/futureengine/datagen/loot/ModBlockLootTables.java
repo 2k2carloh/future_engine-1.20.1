@@ -38,8 +38,22 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(Modblock.RESINE_PINE_LOG.get());
         this.dropSelf(Modblock.PINE_PLANKS.get());
         this.dropSelf(Modblock.SPRAYER.get());
+
         this.add(Modblock.URANIUM_ORE.get(),
                 block -> createCopperLikeOreDrops(Modblock.URANIUM_ORE.get(), Moditems.URANIUM_RAW.get()));
+
+        this.dropSelf(Modblock.PINE_STAIRS.get());
+        this.dropSelf(Modblock.PINE_BUTTON.get());
+        this.dropSelf(Modblock.PINE_PRESSURE_PLATE.get());
+        this.dropSelf(Modblock.PINE_TRAPDOOR.get());
+        this.dropSelf(Modblock.PINE_FENCE.get());
+        this.dropSelf(Modblock.PINE_FENCE_GATE.get());
+        this.dropSelf(Modblock.PINE_WALL.get());
+
+        this.add(Modblock.PINE_SLAB.get(),
+                block -> createSlabItemTable(Modblock.PINE_SLAB.get()));
+        this.add(Modblock.PINE_DOOR.get(),
+                block -> createDoorTable(Modblock.PINE_DOOR.get()));
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {

@@ -57,6 +57,16 @@ public class ModCreativeModTabs {
                         output.accept(Modblock.STRIPPED_PINE_WOOD.get());
                         output.accept(Modblock.PINE_PLANKS.get());
                         output.accept(Modblock.RESINE_PINE_LOG.get());
+
+                        output.accept(Modblock.PINE_BUTTON.get());
+                        output.accept(Modblock.PINE_STAIRS.get());
+                        output.accept(Modblock.PINE_SLAB.get());
+                        output.accept(Modblock.PINE_TRAPDOOR.get());
+                        output.accept(Modblock.PINE_FENCE_GATE.get());
+                        output.accept(Modblock.PINE_FENCE.get());
+                        output.accept(Modblock.PINE_DOOR.get());
+                        output.accept(Modblock.PINE_PRESSURE_PLATE.get());
+
                     })
                     .build());
 

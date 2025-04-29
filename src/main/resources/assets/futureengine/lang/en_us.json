@@ -32,5 +32,15 @@
   "block.futureengine.stripped_pine_log": "Stripped Pine Log",
   "block.futureengine.stripped_pine_wood": "Stripped Pine Wood",
 
+  "block.futureengine.pine_stairs": "Pine Stairs",
+  "block.futureengine.pine_slab": "Pine Slab",
+  "block.futureengine.pine_button": "Pine Button",
+  "block.futureengine.pine_pressure_plate": "Pine Pressure Plate",
+  "block.futureengine.pine_fence": "Pine Fence",
+  "block.futureengine.pine_fence_gate": "Pine Fence Gate",
+  "block.futureengine.pine_wall": "Pine Wall",
+  "block.futureengine.pine_door": "Pine Door",
+  "block.futureengine.pine_trapdoor": "Pine Trapdoor",
+
   "futureenginetab.futureengine_tab": "Start Engine"
 }

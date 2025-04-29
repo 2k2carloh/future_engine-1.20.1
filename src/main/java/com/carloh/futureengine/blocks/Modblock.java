@@ -2,13 +2,14 @@ package com.carloh.futureengine.blocks;
 
 import com.carloh.futureengine.FutureEngine;
 import com.carloh.futureengine.item.Moditems;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -54,6 +55,31 @@ public class Modblock {
 
     public static final RegistryObject<Block> PINE_PLANKS = registerBlock("pine_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> PINE_STAIRS = registerBlock("pine_stairs",
+            () -> new StairBlock(() -> Modblock.PINE_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> PINE_SLAB = registerBlock("pine_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> PINE_BUTTON = registerBlock("pine_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON),
+                    BlockSetType.IRON, 10, true));
+    public static final RegistryObject<Block> PINE_PRESSURE_PLATE = registerBlock("pine_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS),
+                    BlockSetType.IRON));
+
+    public static final RegistryObject<Block> PINE_FENCE = registerBlock("pine_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> PINE_FENCE_GATE = registerBlock("pine_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS), SoundEvents.CHAIN_PLACE, SoundEvents.ANVIL_BREAK));
+    public static final RegistryObject<Block> PINE_WALL = registerBlock("pine_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> PINE_DOOR = registerBlock("pine_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
+    public static final RegistryObject<Block> PINE_TRAPDOOR = registerBlock("pine_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
+
 
     //machines
 

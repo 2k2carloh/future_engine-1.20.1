@@ -66,12 +66,12 @@ public class Modblock {
                     BlockSetType.IRON, 10, true));
     public static final RegistryObject<Block> PINE_PRESSURE_PLATE = registerBlock("pine_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS),
-                    BlockSetType.IRON));
+                    BlockSetType.OAK));
 
     public static final RegistryObject<Block> PINE_FENCE = registerBlock("pine_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> PINE_FENCE_GATE = registerBlock("pine_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS), SoundEvents.CHAIN_PLACE, SoundEvents.ANVIL_BREAK));
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> PINE_WALL = registerBlock("pine_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 

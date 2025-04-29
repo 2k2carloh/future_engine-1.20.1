@@ -66,6 +66,7 @@ public class ModCreativeModTabs {
                         output.accept(Modblock.PINE_FENCE.get());
                         output.accept(Modblock.PINE_DOOR.get());
                         output.accept(Modblock.PINE_PRESSURE_PLATE.get());
+                        output.accept(Modblock.PINE_WALL.get());
 
                     })
                     .build());

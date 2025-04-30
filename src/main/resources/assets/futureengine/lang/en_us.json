@@ -16,6 +16,8 @@
   "item.futureengine.bronze_dust": "Bronze Dust",
   "item.futureengine.tungsten_dust": "Tungsten Dust",
 
+  "item.futureengine.treetap": "Treetap",
+
   "block.futureengine.uranium_block": "Block of Uranium",
   "block.futureengine.uranium_ore": "Uranium Ore",
 
@@ -41,6 +43,8 @@
   "block.futureengine.pine_wall": "Pine Wall",
   "block.futureengine.pine_door": "Pine Door",
   "block.futureengine.pine_trapdoor": "Pine Trapdoor",
+
+
 
   "futureenginetab.futureengine_tab": "Start Engine"
 }

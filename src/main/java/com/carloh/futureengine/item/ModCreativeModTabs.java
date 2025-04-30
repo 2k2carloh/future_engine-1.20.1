@@ -68,6 +68,8 @@ public class ModCreativeModTabs {
                         output.accept(Modblock.PINE_PRESSURE_PLATE.get());
                         output.accept(Modblock.PINE_WALL.get());
 
+                        output.accept(Moditems.TREETAP.get());
+
                     })
                     .build());
 

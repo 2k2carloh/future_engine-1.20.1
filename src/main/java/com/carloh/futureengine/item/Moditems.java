@@ -54,6 +54,10 @@ public class Moditems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> TUNGSTEN_DUST = ITEMS.register("tungsten_dust",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
+    //3D
+    public static final RegistryObject<Item> TREETAP = ITEMS.register("treetap",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus){

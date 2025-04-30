@@ -38,6 +38,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Moditems.URANIUM_INGOT.get()), has(Moditems.URANIUM_INGOT.get()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Modblock.RAW_URANIUM_ORE.get())
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', Moditems.URANIUM_RAW.get())
+                .unlockedBy(getHasName(Moditems.URANIUM_RAW.get()), has(Moditems.URANIUM_RAW.get()))
+                .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Modblock.PINE_SLAB.get(), 6)
                 .pattern("###")
@@ -98,6 +105,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Moditems.URANIUM_INGOT.get(), 9)
                 .requires(Modblock.URANIUM_BLOCK.get())
                 .unlockedBy(getHasName(Modblock.URANIUM_BLOCK.get()), has(Modblock.URANIUM_BLOCK.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Moditems.URANIUM_RAW.get(), 9)
+                .requires(Modblock.RAW_URANIUM_ORE.get())
+                .unlockedBy(getHasName(Modblock.RAW_URANIUM_ORE.get()), has(Modblock.RAW_URANIUM_ORE.get()))
                 .save(pWriter);
 
     }

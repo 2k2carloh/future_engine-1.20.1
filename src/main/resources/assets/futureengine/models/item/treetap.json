@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "futureengine:item/treetap_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "futureengine:item/treetap_2d"
+    },
+    "ground": {
+      "parent": "futureengine:item/treetap_2d"
+    },
+    "fixed": {
+      "parent": "futureengine:item/treetap_2d"
+    }
+  }
+}
